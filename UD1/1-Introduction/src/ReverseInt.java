@@ -1,5 +1,5 @@
-
-import java.util.Scanner;
+//5.10
+import java.util.Scanner;     
 
 public class ReverseInt {
 

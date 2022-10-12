@@ -4,6 +4,7 @@ public class SumAverageRunningInt2 {
         int sum = 0;          // The accumulated sum, init to 0
         double average = 0;   
         double media;
+
         final int LOWERBOUND = 1;
         final int UPPERBOUND = 100;
   

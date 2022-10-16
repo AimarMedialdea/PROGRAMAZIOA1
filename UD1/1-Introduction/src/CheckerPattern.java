@@ -1,7 +1,6 @@
-//6.1
 import java.util.Scanner;
 
-public class SquarePattern {
+public class CheckerPattern {
     public static void main(String[] args) {
 
         int tamaño;
@@ -16,7 +15,12 @@ public class SquarePattern {
 
         for(int row = 1; row <= tamaño; row++){
             for(int col = 1; col <= tamaño; col++){
-                System.out.print("# ");
+                if(row %2 == 0){
+                    System.out.print("# ");
+                }else{
+                    System.out.print(" #");
+                }
+
             }    
             System.out.println();
         }

@@ -1,3 +1,5 @@
+//examen
+
 import java.util.Scanner;
 
 public class gurutzea {

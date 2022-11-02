@@ -1,4 +1,4 @@
-public class SumAverageRunningInt2 {
+/* public class SumAverageRunningInt2 {
     public static void main (String[] args) {
         // Define variables
         int sum = 0;          // The accumulated sum, init to 0
@@ -20,5 +20,5 @@ public class SumAverageRunningInt2 {
   System.out.println(sum);
   System.out.println(media);
      }
-     }
+     } */
   

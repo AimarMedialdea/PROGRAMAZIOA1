@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Laukia {
 
     private int zabalera;
@@ -60,4 +62,47 @@ public class Laukia {
 
     }
 
+    public void marraztuBeteta() {
+
+        for (int i = 1; i <= this.getZabalera(); i++) {
+            for (int x = 1; x < this.getAltuera(); x++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+    }
+
+    public void marraztuHutsik() {
+
+        for (int i = 1; i <= this.getZabalera(); i++) {
+            for (int x = 1; x <= this.getAltuera(); x++) {
+                if (x == 1 || i == 1 || x == this.getAltuera() || i == this.getZabalera()) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }    
+            }
+            System.out.println();
+        }
+    }
+
+    public void marraztuBarrua(){
+
+        char barrua;
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Sartu laukiaren zabalera: ");
+        barrua = in.next().charAt(0);
+        in.close();
+        
+        for (int i = 1; i <= this.getZabalera(); i++) {
+            for (int x = 1; x < this.getAltuera(); x++) {
+                System.out.print(barrua + " ");
+            }
+            System.out.println();
+        }
+
+
+    }
 }

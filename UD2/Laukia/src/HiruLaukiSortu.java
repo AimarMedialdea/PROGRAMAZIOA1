@@ -11,6 +11,11 @@ public class HiruLaukiSortu {
         System.out.println(l2);
         System.out.println(l3);
 
+        System.out.print("Hona marrazkia beteta: ");
+        
+
+
+
 
     }
 }

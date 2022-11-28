@@ -26,7 +26,7 @@ public class Zatikia {
     }
 
     public String toString(){
-        return "s";
+        return "[" + izendatzailea +"/"+ zenbakitzailea + "]";
     }
 
     public static Zatikia biderkatu(Zatikia zat1, Zatikia zat2){
@@ -78,4 +78,31 @@ public class Zatikia {
 
     }
 
+    public void sinplifikatu1(){
+        int simplifikatua = 2;
+        int zat1 = zenbakitzailea;
+        int zat2 = izendatzailea;
+        int batuketaZati = 0;
+        int batuketaIzened = 0;
+
+        while(simplifikatua < zat1 && zat1 % simplifikatua == 2){
+            while(simplifikatua < zat2 && zat2 % simplifikatua == 2){
+                batuketaZati = zat2 / simplifikatua;
+                simplifikatua ++;
+
+                
+            }
+            batuketaIzened = zat1 / simplifikatua;
+            simplifikatua ++;
+        }
+
+        Zatikia zat6 = new Zatikia(batuketaIzened, batuketaZati);
+
+        this.setIzendatzailea(zat6.getIzendatzailea());
+        this.setIzendatzailea(zat6.getZenbakitzailea());
+
+       // https://www.lawebdelprogramador.com/foros/Java/1615151-FRACCIONES-SIMPLIFICADAS-necesito-modificar-la-clase-FRACTION.html
+
+    
+    }
 }

@@ -8,7 +8,7 @@ public class Entrenador extends IntegranteSeleccion{
 
     private String idFederacion;
 
-    public Entrenador(int id, String nombre, String apellidos, int edad, String idFederacion) {
+    public Entrenador(String nombre, int id, String apellidos, int edad, String idFederacion) {
         super(id, nombre, apellidos, edad);
         this.idFederacion = idFederacion;
     }

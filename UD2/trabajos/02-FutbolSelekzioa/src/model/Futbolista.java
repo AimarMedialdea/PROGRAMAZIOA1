@@ -1,13 +1,22 @@
 package model;
 
-public class Futbolista {
+import enumak.Demarkazioa;
+
+public class Futbolista extends IntegranteSeleccion {
+
+
+    public Futbolista(int id, String nombre, String apellidos, int edad){
+        super(id,nombre,apellidos,edad);
+    }
 
     private int dorsal;
     private Demarkazioa demarcacion;
     
-    public Futbolista(int dorsal, Demarkazioa demarcacion) {
+    public Futbolista(int id, int azkenId, Demarkazioa por, String string, int dorsal, String string2) {
+        super(id,azkenId,por,string);
         this.dorsal = dorsal;
-        this.demarcacion = demarcacion;
+        this.demarcacion = string2;
+
     }
 
     public int getDorsal() {
@@ -34,4 +43,8 @@ public class Futbolista {
 
     }
     
+    @Override
+    public String toString(){
+        return "Futbolista{id= " + this.id + " nombre= " + nombre + " apellidos= " + this.getApellidos() + " edad= " + this.getEdad() + " dorsal= " + dorsal + demarcacion + "}";
+    }
 }

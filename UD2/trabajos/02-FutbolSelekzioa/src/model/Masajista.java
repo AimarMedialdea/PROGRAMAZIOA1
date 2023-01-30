@@ -4,7 +4,7 @@ public class Masajista {
     private String titulacion;
     private int aniosExperiencia;
     
-    public Masajista(String titulacion, int aniosExperiencia) {
+    public Masajista(String titulacion, int aniosExperiencia, int i, String string, int j, String string2) {
         this.titulacion = titulacion;
         this.aniosExperiencia = aniosExperiencia;
     }
@@ -27,6 +27,10 @@ public class Masajista {
 
     public void darMasaje(){
 
+    }
+
+    public String toString(){
+        return  "Futbolista{id= " + titulacion + "}";
     }
 
     

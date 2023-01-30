@@ -15,7 +15,7 @@ public IntegranteSeleccion(int id, String nombre, String apellidos, int edad){
 }
 
 public int getId() {
-    return id;
+    return id; 
 }
 
 public void setId(int id) {

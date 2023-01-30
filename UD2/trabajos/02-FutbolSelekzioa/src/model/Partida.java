@@ -39,8 +39,8 @@ public class Partida{
         this.txartelak = txartelak;
     }
     
-    public Futbolista txartelaJarri(Futbolista f){
+/*     public Futbolista txartelaJarri(Futbolista f){
         
-    }
+    } */
     
 }

@@ -61,9 +61,9 @@ public class EuskalSelekzioa {
      * Objektu bakoitza sortu ondoren, bere datuak inprimatu eta kontzentratu eta bidaiatuko dute
      */
     public static void bestePartaideBatzukSortu(){
-        Futbolista futbol = new Futbolista(1, "Asier", "Villalibre", 23,11, Demarkazioa.DEL );
-        Futbolista futbol1 = new Futbolista(1, "Javier", "Clemente", 34,7, Demarkazioa.POR );
-        Futbolista futbol2 = new Futbolista(1, "Asier", "Villalibre", 24,2, Demarkazioa.MED );
+        Futbolista futbol = new Futbolista(11, 1, Demarkazioa.DEL, "Asier", "Villalibre",  );
+        Futbolista futbol1 = new Futbolista(7, 1,  Demarkazioa.POR, "Javier", 34, "Clemente" );
+        Futbolista futbol2 = new Futbolista( 2, 3, Demarkazioa.MED, "Asier" , 24 , "Villalibre");
 
         System.out.println(futbol);
         System.out.println(futbol1);
@@ -108,7 +108,17 @@ public class EuskalSelekzioa {
      * @return 
      */
     public static boolean partaideaEzabatu(int id){
+        System.out.println(selekzioa);
 
+        for(int i = 0; i < selekzioa.size(); i++){
+            if(id == selekzioa.get(i).getId()){
+                selekzioa.remove(i);
+                System.out.println(selekzioa);
+                return true;
+            }
+        }
         return false;
     }
 }
+
+//menu booleano + while por si no elige ninguna opcion + switch

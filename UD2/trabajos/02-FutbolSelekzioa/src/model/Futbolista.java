@@ -12,11 +12,10 @@ public class Futbolista extends IntegranteSeleccion {
     private int dorsal;
     private Demarkazioa demarcacion;
     
-    public Futbolista(int id, int azkenId, Demarkazioa por, String string, int dorsal, String string2) {
-        super(id,azkenId,por,string);
+    public Futbolista(int dorsal, int id,  Demarkazioa demarcacion, String nombre, int edad, String apellidos  ) {
+        super(id,nombre,apellidos,edad);
         this.dorsal = dorsal;
-        this.demarcacion = string2;
-
+        this.demarcacion = demarcacion;
     }
 
     public int getDorsal() {
@@ -36,10 +35,11 @@ public class Futbolista extends IntegranteSeleccion {
     }
 
     public void entrenar(){
-
+        System.out.println("Entrenando");
     }
 
     public void jugarPartido(){
+        System.out.println("Jugando");
 
     }
     

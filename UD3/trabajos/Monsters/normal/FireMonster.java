@@ -1,3 +1,4 @@
+package normal;
 public class FireMonster extends Monster {
 
     public FireMonster(String nombre) {

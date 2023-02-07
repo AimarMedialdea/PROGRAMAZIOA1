@@ -1,3 +1,4 @@
+package normal;
 public class StoneMonster extends Monster {
 
     public StoneMonster(String nombre) {

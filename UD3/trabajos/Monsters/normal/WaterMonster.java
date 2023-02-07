@@ -1,3 +1,4 @@
+package normal;
 public class WaterMonster extends Monster{
 
     public WaterMonster(String nombre) {

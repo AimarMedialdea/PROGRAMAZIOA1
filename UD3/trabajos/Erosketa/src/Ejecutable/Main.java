@@ -2,9 +2,11 @@ package Ejecutable;
 
 import java.util.Scanner;
 
+import Model.Bezeroa;
+
 public class Main {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+/*         Scanner in = new Scanner(System.in);
         int seleccion;
 
         System.out.println("*********************************************");
@@ -18,7 +20,9 @@ public class Main {
         System.out.println("*  ---------------------------------------");
         System.out.println();
         System.out.print("* Aukeratu zenbaki bat: ");
-        seleccion = in.nextInt();
+        seleccion = in.nextInt(); */
+
+
 
 
     }

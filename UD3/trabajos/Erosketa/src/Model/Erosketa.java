@@ -34,5 +34,9 @@ public class Erosketa {
     public String toStringLuzea(){
         return "";
     }
+
+    public boolean guztiraEgiaztatu(){
+        return true;
+    }
     
 }

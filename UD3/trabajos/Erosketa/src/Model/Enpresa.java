@@ -1,25 +1,39 @@
 package Model;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
+
+import java.util.Arrays;
 
 public class Enpresa extends Bezeroa{
-    
-    public Enpresa(char[] kodea, LocalDate data, Bezeroa bezeroa, ArrayList<Produktua> produktuak,
-            ArrayList<Integer> unitateak, double guztira, int kodea2, String helbidea) {
-        super(kodea, data, bezeroa, produktuak, unitateak, guztira, kodea2, helbidea);
-    }
+
+    private int kodea;
     private String izenJuridikoa;
     private String izenKomertziala;
-    private String kontaktoEmailak;
+    private String helbidea;
+    private String[] kontaktoEmailak;
+
     @Override
     public String getIzena() {
-        return izenJuridikoa;
+        return izenKomertziala;
     }
     @Override
     public String getEmaila() {
-        return kontaktoEmailak;
+        return kontaktoEmailak[0] + kontaktoEmailak[1];
+    }
+
+    public int getKodea(){
+        return kodea;
+    }
+
+    public String getHelbidea(){
+        return helbidea;
+    }
+
+    @Override
+    public String toString(){
+        return "Enpresa [kodea=" + kodea + ", izena=" + getIzena() +  "helbidea=" + helbidea + ", kontaktoenEmailak=" + Arrays.toString(kontaktoEmailak) + "]";
     }
 
     
+
 }
+

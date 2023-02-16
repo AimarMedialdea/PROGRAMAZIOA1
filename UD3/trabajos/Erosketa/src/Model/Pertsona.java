@@ -1,23 +1,39 @@
 package Model;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
-
 public class Pertsona extends Bezeroa {
-    public Pertsona(char[] kodea, LocalDate data, Bezeroa bezeroa, ArrayList<Produktua> produktuak,
-            ArrayList<Integer> unitateak, double guztira, int kodea2, String helbidea) {
-        super(kodea, data, bezeroa, produktuak, unitateak, guztira, kodea2, helbidea);
-    }
+
+    private int kodea;
     private String izena;
     private String abizena;
+    private String helbidea;
     private String emaila;
+
+    
     @Override
     public String getIzena() {
-        return izena;
+        return izena + " " + abizena;
     }
+
     @Override
     public String getEmaila() {
         return emaila;
     }
 
+    public int getKodea(){
+        return kodea;
+    }
+
+    public String getHelbidea(){
+        return helbidea;
+    }
+    
+    @Override
+    public String toString(){
+        return "Pertsona [kodea=" + kodea + ", izena=" + izena + ", abizena=" + abizena + ", helbidea=" + helbidea + ", emaila=" + emaila + "]";
+    }
+
+    
+
+    
 }
+

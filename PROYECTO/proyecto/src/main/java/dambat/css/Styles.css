@@ -1,0 +1,18 @@
+.buttonn{
+    -fx-background-color: #99CCFF;
+    -fx-background-radius:30 0 0 30;
+    
+}
+
+.buttonn:hover{
+    -fx-background-color: #77b0e9;
+}
+
+.buttonn:pressed{
+    -fx-background-color: #4092e4;
+}
+
+.vboxx{
+    -fx-background-color: #99CCFF;
+    
+}

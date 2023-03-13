@@ -16,3 +16,15 @@
     -fx-background-color: #99CCFF;
     
 }
+
+.loginB{
+    -fx-background-color: #61a5e9;
+}
+
+.loginP{
+    -fx-background-color: #7bbdff;
+}
+
+.textL{
+    -fx-background-color: white; 
+}

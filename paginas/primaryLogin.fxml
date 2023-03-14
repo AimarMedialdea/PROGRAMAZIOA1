@@ -10,11 +10,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../java/dambat/css/Styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dambat.PrimaryController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../PROYECTO/proyecto/src/main/java/dambat/css/Styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <left>
       <VBox alignment="CENTER" prefHeight="400.0" prefWidth="178.0" styleClass="vboxx">
          <children>
-            <Button onAction="#switchToGestion" mnemonicParsing="false" prefHeight="136.0" prefWidth="187.0" styleClass="buttonn" text="Gestion Usuarios" textFill="#c8e1ff">
+            <Button mnemonicParsing="false" prefHeight="136.0" prefWidth="187.0" styleClass="buttonn" text="Gestion Usuarios" textFill="#c8e1ff">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
@@ -43,23 +43,18 @@
          <children>
             <Pane id="paneLog" maxHeight="-Infinity" prefHeight="339.0" prefWidth="288.0" styleClass="loginP">
                <children>
-                  <TextField id="usuario" fx:id="" alignment="CENTER" layoutX="57.0" layoutY="106.0" prefHeight="28.0" prefWidth="174.0" text="aimar" />
+                  <TextField id="usuario" fx:id="" alignment="TOP_CENTER" layoutX="57.0" layoutY="106.0" prefHeight="28.0" prefWidth="174.0" />
                   <Label layoutX="79.0" layoutY="42.0" text="Bienvenido" textFill="#c8e1ff">
                      <font>
                         <Font name="Mongolian Baiti" size="28.0" />
                      </font>
                   </Label>
-                  <TextField id="contraseña" alignment="CENTER" layoutX="57.0" layoutY="163.0" prefHeight="28.0" prefWidth="174.0" text="kk" />
+                  <TextField id="contraseña" alignment="TOP_CENTER" layoutX="57.0" layoutY="163.0" prefHeight="28.0" prefWidth="174.0" />
                   <Button layoutX="82.0" layoutY="242.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="124.0" text="LOGIN" textFill="#71b6ff">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
                   </Button>
-                  <Label id="contraseñaInc" layoutX="88.0" layoutY="308.0" prefHeight="17.0" prefWidth="112.0" textFill="RED">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Label>
                </children>
             </Pane>
          </children>

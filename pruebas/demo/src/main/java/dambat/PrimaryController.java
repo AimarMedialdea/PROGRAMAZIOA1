@@ -10,7 +10,7 @@ import javafx.scene.control.ComboBox;
 import model.Conexion;
 import model.Rol;
 
-public class SecondaryController implements Initializable{
+public class PrimaryController implements Initializable{
     //componentes interfaz grafica
     @FXML
     private ComboBox<Rol> tablaName;

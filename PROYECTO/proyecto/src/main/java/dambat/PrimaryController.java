@@ -1,16 +1,50 @@
 package dambat;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 
 public class PrimaryController {
 
     @FXML
-    Button gestion;
+    private TextField usuario;
 
     @FXML
-    private void switchToSecondary() throws IOException {
+    private TextField contraseña;
+
+    @FXML
+    Pane paneLog;
+
+    @FXML
+    Label contraseñaInc;
+
+    @FXML
+    private void switchToGestion() throws IOException {
         App.setRoot("secondary");
     }
+/*
+    @FXML
+     private void login(){
+        String elUsuario = "aimar";
+        String laContraseña = "kk";
+
+        String usu = usuario.getText();
+        String con = contraseña.getText();
+
+
+            if(elUsuario == usuario.getText() && laContraseña == contraseña.getText()){
+
+                contraseñaInc.setText("Bien");
+            }else{
+                contraseñaInc.setText("Contraseña o usuario inconrrectos");
+            }
+        }
+
+
+    } */
 }
+

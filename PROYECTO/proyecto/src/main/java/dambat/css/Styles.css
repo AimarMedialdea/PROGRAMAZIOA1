@@ -1,7 +1,7 @@
 .buttonn{
-    -fx-background-color: #99CCFF;
+    -fx-background-color: #7bbdff;
     -fx-background-radius:30 0 0 30;
-    
+/*     -fx-margin:10% 0%; */
 }
 
 .buttonn:hover{
@@ -13,8 +13,8 @@
 }
 
 .vboxx{
-    -fx-background-color: #99CCFF;
-    
+    -fx-background-color: #7bbdff;
+/*     -fx-spacing: 20%;   */
 }
 
 .loginB{
@@ -25,6 +25,4 @@
     -fx-background-color: #7bbdff;
 }
 
-.textL{
-    -fx-background-color: white; 
-}
+

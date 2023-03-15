@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dambat.PrimaryController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dambat.PrimaryController">
    <children>
       <SplitPane dividerPositions="0.4005235602094241" prefHeight="400.0" prefWidth="766.0">
         <items>
@@ -77,10 +77,10 @@
                               <Insets right="5.0" />
                            </padding>
                         </Label>
-                        <TextField prefHeight="25.0" prefWidth="69.0" GridPane.columnIndex="1" />
-                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <TextField prefHeight="25.0" prefWidth="217.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="tId" prefHeight="25.0" prefWidth="69.0" GridPane.columnIndex="1" />
+                        <TextField fx:id="tNombre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="tApellido" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="tEmail" prefHeight="25.0" prefWidth="217.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                         <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
                         <TextField GridPane.columnIndex="1" GridPane.rowIndex="7" />
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">

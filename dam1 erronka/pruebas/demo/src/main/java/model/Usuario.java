@@ -130,10 +130,10 @@ public class Usuario{
 	public static void llenarTablaUsuario(Connection connection, ObservableList<Usuario>tablaUsuario){
 		try {
 			Statement instruccion = connection.createStatement();
-			ResultSet resultado = instruccion.executeQuery("SELECT id_user, name, surname, email, birthdate, id_role FROM user");
+			ResultSet resultado = instruccion.executeQuery("SELECT id_user, name, surname, email, username, birthdate, id_role FROM user");
 
 			while(resultado.next()){
-				tablaUsuario.add(new Usuario(resultado.getInt("id_user"), resultado.getString("name"), resultado.getString("surname"), resultado.getString("email"),  resultado.getDate("birthdate"), new Rol(resultado.getInt("id_role"))));
+				tablaUsuario.add(new Usuario(resultado.getInt("id_user"), resultado.getString("name"), resultado.getString("surname"), resultado.getString("email"),  resultado.getString("username"), resultado.getDate("birthdate"), new Rol(resultado.getInt("id_role"))));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

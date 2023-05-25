@@ -3,13 +3,11 @@ package dambat;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
-import javafx.geometry.Insets;
 
 public class MenuaController implements Initializable{
 

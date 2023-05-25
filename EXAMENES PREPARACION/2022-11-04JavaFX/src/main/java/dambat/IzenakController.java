@@ -4,12 +4,15 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
 import javafx.geometry.Insets;
 
@@ -27,7 +30,10 @@ public class IzenakController implements Initializable {
     TextField tfAmaitu;
 
     @FXML
-    TableView tvIzenak;
+    TableView<Pertsona> tvIzenak;
+
+    @FXML
+    TableColumn<Pertsona, String> tcIzena;
 
     @FXML
     Button btnReverse;
@@ -35,24 +41,28 @@ public class IzenakController implements Initializable {
     @FXML
     Button btnOrdenatu;
 
+    @FXML private ObservableList<Pertsona> listaIz;
 
     @FXML
     private void gehitu() throws IOException {
         String izena = tfIzena.getText();
 
-        String[] izenak = izena.split(" "); 
+        tfIzena.setText("");
 
-        for(int i = izenak.length - 1; i >= 0; i++){
-            tvIzenak.getItems().add(izenak[i]);
+        listaIz = FXCollections.observableArrayList();
 
+        String[] izenak = izena.split(" ");  
+
+        for(int i = 0; i < izenak.length; i++){
+            listaIz.add(new Pertsona(izenak[i]));
+            tcIzena.setCellValueFactory(new PropertyValueFactory<>("izena"));
         }
 
-
+        tvIzenak.setItems(listaIz);
 
     }
 
     
-
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         vboxErroa.setSpacing(10);

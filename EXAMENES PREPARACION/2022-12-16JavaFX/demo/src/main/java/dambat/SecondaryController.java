@@ -19,7 +19,7 @@ public class SecondaryController {
         App.setRoot("primary");
     }
 
-    public void actualizarTextArea(ArrayList<Langilea> listado) {
+    public void initialize(ArrayList<Langilea> listado) {
         StringBuilder stringBuilder = new StringBuilder();
         for (Langilea langilea : listado) {
             stringBuilder.append(langilea.toString()).append("\n");

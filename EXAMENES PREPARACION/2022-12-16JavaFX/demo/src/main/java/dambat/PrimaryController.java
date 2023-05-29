@@ -20,14 +20,6 @@ public class PrimaryController {
     @FXML
     private TextField tfSueldo;
 
-    private SecondaryController secondaryController;
-
-    public PrimaryController() {
-    }
-
-    public void setSecondaryController(SecondaryController secondaryController) {
-        this.secondaryController = secondaryController;
-    }
     
     @FXML
     private void pasoPag() throws IOException {
@@ -45,8 +37,5 @@ public class PrimaryController {
 
         langilea.add(new Langilea(nombre, apellido, email, sueldo)); 
 
-        if (secondaryController != null) {
-            secondaryController.actualizarTextArea(langilea);
         }
     }
-}

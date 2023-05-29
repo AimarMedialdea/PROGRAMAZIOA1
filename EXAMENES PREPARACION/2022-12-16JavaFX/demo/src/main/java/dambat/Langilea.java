@@ -2,14 +2,17 @@ package dambat;
 
 import java.util.ArrayList;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
 
-public class Langilea{
+public class Langilea {
+    
     private String izena;
     private String abizena;
     private String emaila;
     private double soldata;
 
-    public Langilea(String izena, String abizena, String emaila, double soldata){
+    public Langilea(String izena, String abizena, String emaila, double soldata) {
         this.izena = izena;
         this.abizena = abizena;
         this.soldata = soldata;
@@ -20,7 +23,7 @@ public class Langilea{
         this.izena = izena;
         this.abizena = abizena;
         this.emaila = abizena + "." + izena + "@bertsolaritza.eus";
-        this.soldata = soldata + 1200;
+        this.soldata = 0; // Asignar un valor predeterminado o ajustarlo según tus necesidades
     }
 
     public String getIzena() {
@@ -61,8 +64,7 @@ public class Langilea{
                 + "]";
     }
 
-    public static ArrayList<Langilea> getLangileenZerrenda(){
-
+    public static ArrayList<Langilea> getLangileenZerrenda() {
         ArrayList<Langilea> listado = new ArrayList<>();
         listado.add(new Langilea("Alaia", "Martin", "martin.alaia@bertsozale.eus", 1200));
         listado.add(new Langilea("Nerea", "Ibarzabal", "ibarzabal.nerea@bertsozale.eus", 1200));
@@ -71,11 +73,12 @@ public class Langilea{
         return listado;
     }
 
-    public static void langileakInprimatu(ArrayList<Langilea> lk){
-        for(int i = 0; i < lk.size(); i++){
-            System.out.println(lk);
+    @FXML
+    public static void langileakInprimatu(ArrayList<Langilea> lk, TextArea taGrande) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < lk.size(); i++) {
+            stringBuilder.append(lk.get(i)).append("\n");
         }
+        taGrande.setText(stringBuilder.toString());
     }
-
-    
 }

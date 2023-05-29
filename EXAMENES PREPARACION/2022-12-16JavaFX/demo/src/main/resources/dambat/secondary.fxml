@@ -6,12 +6,17 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dambat.SecondaryController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dambat.SecondaryController">
    <children>
       <Pane prefHeight="400.0" prefWidth="726.0">
          <children>
             <TextArea fx:id="taGrande" prefHeight="400.0" prefWidth="271.0" />
-            <Button fx:id="pasoPag" layoutX="537.0" layoutY="355.0" mnemonicParsing="false" text="---&gt;">
+            <Button layoutX="537.0" layoutY="355.0" mnemonicParsing="false" onAction="#pasoPag" text="---&gt;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="323.0" layoutY="355.0" mnemonicParsing="false" onAction="#actualizarTextArea" text="Actualizar">
                <font>
                   <Font size="15.0" />
                </font>

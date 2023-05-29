@@ -8,10 +8,26 @@ import javafx.scene.control.TextField;
 
 public class PrimaryController {
 
-    @FXML TextField tfNombre;
-    @FXML TextField tfApellido;
-    @FXML TextField tfEmail;
-    @FXML TextField tfSueldo;
+    @FXML
+    private TextField tfNombre;
+
+    @FXML
+    private TextField tfApellido;
+
+    @FXML
+    private TextField tfEmail;
+
+    @FXML
+    private TextField tfSueldo;
+
+    private SecondaryController secondaryController;
+
+    public PrimaryController() {
+    }
+
+    public void setSecondaryController(SecondaryController secondaryController) {
+        this.secondaryController = secondaryController;
+    }
     
     @FXML
     private void pasoPag() throws IOException {
@@ -19,16 +35,18 @@ public class PrimaryController {
     }
 
     @FXML
-    private void crear(){
-        ArrayList<Langilea> langilea = new ArrayList<Langilea>();
+    private void crear() {
+        ArrayList<Langilea> langilea = Langilea.getLangileenZerrenda();
         
         String nombre = tfNombre.getText();
         String apellido = tfApellido.getText();
         String email = tfEmail.getText();
-        double sueldo = Integer.valueOf(tfSueldo.getText());
+        double sueldo = Double.valueOf(tfSueldo.getText());
 
-        Langilea l1 = new Langilea(nombre, apellido, email, sueldo);
+        langilea.add(new Langilea(nombre, apellido, email, sueldo)); 
 
-        
+        if (secondaryController != null) {
+            secondaryController.actualizarTextArea(langilea);
+        }
     }
 }

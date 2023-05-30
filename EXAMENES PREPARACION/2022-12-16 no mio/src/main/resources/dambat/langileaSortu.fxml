@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vboxErroa" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dambat.LangileaSortuController"> <!-- "fx:controller=" Hemen ipintzen dugu controllerraren path-a controller hori erbailiko dugulako-->
+   <children>
+      <Label id="izenburua" text="LANGILEA SORTU">
+         <VBox.margin>
+            <Insets left="75.0" top="20.0" />
+         </VBox.margin></Label>
+      <HBox prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="400.0">
+               <children>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="69.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="231.0" minWidth="10.0" prefWidth="231.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="91.0" text="Izena">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <TextField fx:id="tfIzena" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin></TextField>
+                        <Label prefHeight="17.0" prefWidth="68.0" text="Abizena" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <TextField fx:id="tfAbizena" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin></TextField>
+                        <Label text="Emaila" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <TextField fx:id="tfEmaila" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin></TextField>
+                        <TextField fx:id="tfSoldata" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Label text="Soldata" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <Button fx:id="inprimatu" onAction="#langileaSortu" mnemonicParsing="false"  text="&gt;&gt;">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" top="20.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="ezabatu" onAction="#ezabatu" mnemonicParsing="false" text="Ezabatu">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="20.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="atzera" mnemonicParsing="false" onAction="#atzera" text="Atzera">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin></Button>
+               </children>
+            </VBox>
+            <TextArea fx:id="taSegida" editable="false" prefHeight="200.0" prefWidth="400.0" />
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

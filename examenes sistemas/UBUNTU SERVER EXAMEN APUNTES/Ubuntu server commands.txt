@@ -1,0 +1,66 @@
+Cambiar de usuario normal a superusuario => sudo su y meter contraseña
+Para salir exit
+cd para cambiar direccion
+
+ls para ver lo que hay en esa unidad
+ls --help todos los comandos tienen help, muestra los comandos
+ls -l da mas informacion
+ls -la enseña todos los directorios aunque no sean visibles
+
+flecha hacia arriba muestra el ultimo comando, si pulsas otra vez el ante ultimo y asi sucesivamente
+clear limpia la terminal
+cd /home va al direktorio home
+pwd nos dice donde estamos ahora
+cd y escribes algo y tabulas salen las coincidencias
+
+mkdir crea un direktorio
+mkdir -p puedes crear carpeta y ficheros dentro
+rm -r para borrar un direktorio con ficheros dentro
+rmdir para borrar un direktorio vacio
+
+nano para abrir editor, ctrl o para guardar el fichero y ctrl x para salir del editor
+cat para leer fichero
+
+chmod g para editar permisos
+chmod g -w quitar permisos
+chmod +w sumar permisos o owner, g group, a all (other)
+x es ejecucion
+
+chown para cambiar de propietario de un direktorio o fitxero
+chown julen /testua para cambiar el propietario del fichero o direktorio
+chown :erabiltzaileak /testua para cambiar el grupo solamente
+chown julen:erabiltzaileak /testua pa cambiar propietario y grupo
+
+sudo adduser julen pa crear usuario
+pwd para ver donde estamos
+
+a2ensite www.artzai.net para habilitar un virtual host
+a2dissite www.artzai.net para deshabilitar un virtual host
+
+
+para entrar a la configuracion de red sudo nano /etc/netplan y despues tabular
+despues aplicar cambios sudo netplan apply
+y para verificar cambios ip a
+
+PARA INSTALAR WEBMIN EJECUTAR ESTOS COMANDOS UNO A UNO (DEBIAN/UBUNTU/MINT)
+
+sudo sh -c 'echo "deb http://ftp.au.debian.org/debian/ buster main non-free" > /etc/apt/sources.list.d/nonfree.list'
+sudo apt update
+sudo apt install wget
+
+wget -qO - http://www.webmin.com/jcameron-key.asc | sudo apt-key add -
+sudo sh -c 'echo "deb http://download.webmin.com/download/repository sarge contrib" > /etc/apt/sources.list.d/webmin.list'
+sudo apt update
+sudo apt install webmin
+
+PARA CONECTAR A WEBMIN => METER EN BUSCADOR https://192.168.72.113:10000/  (ip del server con el puerto 10000)
+
+https://webmin.paag.lan:10000 para entrar a webmin desde browser
+
+https de webmin es este - /etc/webmin/miniserv.pem
+
+sudo openssl req -x509 -nodes -days 1095 -newkey rsa:2048 -out /etc/apache2/ssl/server.crt -keyout /etc/apache2/ssl/server.key
+
+sudo ln -s /etc/apache2/sites-available/web.azterketa1.lan.conf /etc/apache2/sites-enabled/web.azterketa1.lan.conf
+
+

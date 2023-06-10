@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+
+<HBox fx:id= "hboxErroa" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18"
+  xmlns:fx="http://javafx.com/fxml/1" fx:controller="dambat.controller.SukaldariaController">
+  <children>
+    <VBox>
+      <children>
+        <GridPane>
+          <children>
+            <Label text="Eguna:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="tfEguna" GridPane.columnIndex="1" GridPane.rowIndex="0"
+              promptText="Erabili 'uuuu-hh-ee' formatua " />
+            <Label text="Jana:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="tfJana" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Prezioa: " GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="tfPrezioa" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+          </children>
+        </GridPane>
+        <Button fx:id="btnGehitu" mnemonicParsing="false" prefHeight="24.0" prefWidth="300.0"
+          text="BAZKARIA GEHITU"
+          onAction="#handleGehitu" />
+        <Button fx:id="btnAtzera" mnemonicParsing="false" prefHeight="24.0" prefWidth="300.0"
+          text="ATZERA"
+          onAction="#hasierara" />  
+        <Label id="oharra" fx:id="lbMezua" text="       " />
+      </children>
+    </VBox>
+    <TableView fx:id="tvBazkariak" layoutX="42.0" layoutY="61.0"
+      prefHeight="200.0" prefWidth="500.0">
+      <columns>
+        <TableColumn fx:id="tcEguna" prefWidth="100.0" text="EGUNA" />
+        <TableColumn fx:id="tcJana" prefWidth="300.0" text="JANA" />
+        <TableColumn fx:id="tcPrezioa" prefWidth="90.0" text="PREZIOA" />
+      </columns>
+    </TableView>
+
+  </children>
+
+</HBox>
